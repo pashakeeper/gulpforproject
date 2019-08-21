@@ -19,7 +19,7 @@ function watch() {
         notify: false
     });
     gulp.watch('./src/sass/**/*.scss', style);
-    gulp.watch('./src/js/**/*.js', browserSync.reload);
+    gulp.watch('./src/js/**/*.js',browserSync.reload);
     gulp.watch('./src/**/*.html').on('change', browserSync.reload);
 }
 
@@ -61,19 +61,6 @@ function scriptslibs() {
         .pipe(browserSync.stream(true))
 }
 
-function script() {
-    return gulp.src('./src/js/scripts.js')
-        .pipe(rename({suffix: '.clear'}))
-        .pipe(uglify({
-            toplevel: true
-        }))
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
-        .pipe(gulp.dest('./src/js'))
-        .pipe(browserSync.stream(true))
-
-}
 
 
 //tasks
