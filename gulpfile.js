@@ -19,7 +19,7 @@ function watch() {
         notify: false
     });
     gulp.watch('./src/sass/**/*.scss', style);
-    gulp.watch('./src/js/**/*.js',browserSync.reload);
+    gulp.watch('./src/js/**/*.js').on('change', browserSync.reload);
     gulp.watch('./src/**/*.html').on('change', browserSync.reload);
 }
 
@@ -67,6 +67,5 @@ function scriptslibs() {
 gulp.task('style', style);
 gulp.task('libs', libs);
 gulp.task('scriptslibs', scriptslibs);
-gulp.task('script', script);
 gulp.task('clean', clean);
-gulp.task('watch', watch);
+gulp.task('default', watch);
