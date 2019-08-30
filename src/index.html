@@ -6,23 +6,1001 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gulp for Projects</title>
+
+    <!--Fonts-->
+    <link rel="stylesheet" href="fonts/font-face.css">
+    <!--Libs-->
     <link rel="stylesheet" href="css/libs.min.css">
+    <!--Style sheet-->
     <link rel="stylesheet" href="css/style.css">
+    <!--Mediaqueries-->
+    <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
+<!--Pre header-->
+<section class="pre_header" id="pre_header">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-lg-8">
+                <ul class="nav main_menu justify-content-between">
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Технические каталоги</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Видео</a></li>
+                    <li><a href="#">Подбор муфт</a></li>
+                    <li><a href="#">Прайс-лист</a></li>
+                    <li><a href="#">Оплата и доставка</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 ml-auto">
+                <div class="actions_link d-flex">
+                    <a href="#">Вход</a>
+                    <a href="#">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end of pre header-->
+<!--Header-->
 <header>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-5">
+        <div class="row align-items-center">
+            <div class="col-lg-2">
                 <a href="#" class="logo">
-                    This is logo
+                    <img src="img/logo.png" alt="">
                 </a>
+            </div>
+            <div class="col-lg-8 info_row d-flex flex-wrap ml-auto">
+
+                <a href="tel:+74956385766" class="phone"><i class="fa fa-phone"></i>+7 (495) 638-57-56</a>
+                <p class="address">
+                    <i class="fa fa-map-marker-alt"></i><span>г. Москва, ул. Дорожная, д. 60, стр. 4</span>
+                </p>
+                <p class="email"><i class="fa fa-clock"></i>Режим работы: Пн – Пт, с 9:00 до 18:00</p>
+                <a href="#" class="send_message"><i class="fa fa-envelope"></i>Отправить заявку</a>
+                <div class="col-sm-4 mt-3 p-0 d-flex">
+                    <a href="#" class="catalog_trigger"><img src="img/catalog.png" alt="">Каталог продукции</a>
+                    <a href="#" class="mufta_trigger"><img src="img/myfta.png" alt="">Подбор муфт</a>
+                </div>
+                <div class="col-sm-8 mt-3">
+                    <div class="input_box ml-auto">
+                        <i class="fa fa-search"></i>
+                        <input type="search" class="search" placeholder="Поиск по названию">
+                        <i class="fa fa-caret-down"></i>
+                        <div class="category">
+                            <input type="text" placeholder="Все категории">
+                            <i class="fa fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 right_box">
+                <div class="cart_box">
+                    <a href="#" class="cart"><i class="fa fa-shopping-cart"></i></a>
+                    <div class="right_side">
+                        <p>Всего товаров:<span> 1 шт.</span></p>
+                        <p>На сумму:<span> 3 492 596,05  ₽</span></p>
+                    </div>
+                </div>
+                <div class="col-sm-12 pl-0 pr-0 d-flex faworit_row">
+                    <p><a href="#"><i class="fa fa-heart"></i>Избранное</a><span class="count">0</span></p>
+                    <p><a href="#"><i class="fa fa-signal"></i>Сравнить</a><span class="count">0</span></p>
+                </div>
             </div>
         </div>
     </div>
 </header>
+<!--End of header-->
 
+<!--Content-->
+<section class="content_section" id="content_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 ml-auto mr-auto">
+                <ul class="nav bread_crumbs">
+                    <li><a href="#">Главная</a></li>
+                    <li>></li>
+                    <li><a class="active" href="#">Раздел</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2 left_column">
+                <div class="left_menu">
+                    <div class="menu_header">Разделы каталога</div>
+                    <ul class="side_menu">
+                        <li><a href="#">Кабель, провод <i class="fa fa-angle-right"></i></a></li>
+                        <li><a href="#">Электротехническая продукция <i class="fa fa-angle-right"></i></a></li>
+                        <li><a href="#">Кабеленесущие системы <i class="fa fa-angle-right"></i></a></li>
+                        <li><a href="#">Светотехническая продукция <i class="fa fa-angle-right"></i></a></li>
+                        <li><a href="#">Электрощитовое оборудование <i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                    <img src="img/left_img1.png" alt="" class="left_banners">
+                    <img src="img/left_img2.png" alt="" class="left_banners">
+                </div>
+            </div>
+            <div class="col-lg-8 content_center">
+                <!--<h1 class="title">Название раздела</h1>-->
+                <div class="slider_banner">
+                    <div class="slide">
+                        <img src="img/slider_img1.png" alt="">
+                        <div class="texts">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <h3 class="slide_title">Электротехническая продукция</h3>
+                                        <a href="#" class="go_catalog">Перейти в каталог</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/slider_img1.png" alt="">
+                        <div class="texts">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <h3 class="slide_title">Электротехническая продукция</h3>
+                                        <a href="#" class="go_catalog">Перейти в каталог</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/slider_img1.png" alt="">
+                        <div class="texts">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <h3 class="slide_title">Электротехническая продукция</h3>
+                                        <a href="#" class="go_catalog">Перейти в каталог</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of slider-->
+                <div class="slider_nav">
+                    <div class="prev"><img src="img/prev.png" alt=""></div>
+                    <div class="next"><img src="img/next.png" alt=""></div>
+                </div>
+                <div class="row ml-0 mr-0 margin align-items-center">
+                    <div class="col-lg-5">
+                        <h2 class="second_title">Бренды</h2>
+                    </div>
+                    <div class="col-lg-5 d-flex justify-content-end ml-auto align-items-center">
+                        <a href="#" class="see_all">Смотреть все</a>
+                        <div class="brands_navs custom_navs">
+                            <div class="prev_arr"><i class="fa fa-angle-left"></i></div>
+                            <div class="next_arr"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ml-0 mr-0">
+                    <div class="col-lg-12 p-0">
+                        <div class="brands_slider">
+                            <div class="slide">
+                                <div class="img"><img src="img/brand1.png" alt=""></div>
+                                <div class="img"><img src="img/brand2.png" alt=""></div>
+                            </div>
+                            <div class="slide">
+                                <div class="img"><img src="img/brand3.png" alt=""></div>
+                                <div class="img"><img src="img/brand4.png" alt=""></div>
+                            </div>
+                            <div class="slide">
+                                <div class="img"><img src="img/brand5.png" alt=""></div>
+                                <div class="img"><img src="img/brand6.png" alt=""></div>
+                            </div>
+                            <div class="slide">
+                                <div class="img"><img src="img/brand7.png" alt=""></div>
+                                <div class="img"><img src="img/brand8.png" alt=""></div>
+                            </div>
+                            <div class="slide">
+                                <div class="img"><img src="img/brand1.png" alt=""></div>
+                                <div class="img"><img src="img/brand2.png" alt=""></div>
+                            </div>
+                            <div class="slide">
+                                <div class="img"><img src="img/brand3.png" alt=""></div>
+                                <div class="img"><img src="img/brand4.png" alt=""></div>
+                            </div>
+                            <div class="slide">
+                                <div class="img"><img src="img/brand5.png" alt=""></div>
+                                <div class="img"><img src="img/brand6.png" alt=""></div>
+                            </div>
+                            <div class="slide">
+                                <div class="img"><img src="img/brand7.png" alt=""></div>
+                                <div class="img"><img src="img/brand8.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of slider-->
+                <div class="row ml-0 mr-0 margin align-items-center">
+                    <div class="col-lg-5">
+                        <h2 class="second_title">Популярное</h2>
+                    </div>
+                    <div class="col-lg-5 d-flex justify-content-end ml-auto align-items-center">
+                        <a href="#" class="see_all">Смотреть все</a>
+                        <div class="popular custom_navs">
+                            <div class="prev_arr"><i class="fa fa-angle-left"></i></div>
+                            <div class="next_arr"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ml-0 mr-0">
+                    <div class="col-lg-12 pl-0 pl-0">
+                        <div class="popular_slider">
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod1.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod2.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod3.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod1.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod1.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod2.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod3.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod1.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ml-0 mr-0 margin align-items-center">
+                    <div class="col-lg-5">
+                        <h2 class="second_title">Новинки</h2>
+                    </div>
+                    <div class="col-lg-5 d-flex justify-content-end ml-auto align-items-center">
+                        <a href="#" class="see_all">Смотреть все</a>
+                        <div class="new custom_navs">
+                            <div class="prev_arr"><i class="fa fa-angle-left"></i></div>
+                            <div class="next_arr"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ml-0 mr-0">
+                    <div class="col-lg-12 pl-0 pr-0">
+                        <div class="new_slider">
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod1.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod2.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod3.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod1.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod1.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod2.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod3.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod1.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ml-0 mr-0 margin align-items-center">
+                    <div class="col-lg-5">
+                        <h2 class="second_title">Акции</h2>
+                    </div>
+                    <div class="col-lg-5 d-flex justify-content-end ml-auto align-items-center">
+                        <a href="#" class="see_all">Смотреть все</a>
+                        <div class="stock custom_navs">
+                            <div class="prev_arr"><i class="fa fa-angle-left"></i></div>
+                            <div class="next_arr"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ml-0 mr-0">
+                    <div class="col-lg-12 pl-0 pr-0">
+                        <div class="stock_slider">
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod1.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod2.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod3.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod1.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod1.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod2.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod3.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image_holder">
+                                    <img src="img/prod1.png" alt="" class="image">
+                                </div>
+                                <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</h3>
+                                <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                <p class="price">169.01 ₽</p>
+                                <div class="quantity_stock">
+                                    <p><span></span></p>
+                                    <p><span></span></p>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="10" step="1" value="1">
+                                    </div>
+                                    <div class="actions_right">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                    </div>
+                                </div>
+                                <div class="by_row">
+                                    <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ml-0 mr-0 margin">
+                    <div class="col-lg-12 post_box">
+                    <h2 class="second_title">Электротехническая продукция</h2>
+                        <p>Компания «ГринЭнергоСнаб» является торговым предприятием, поставляющим кабельные муфты напряжением от 1 кВ до 35 кВ производства ЗАО «Подольский завод электромонтажных изделий» (ЗАО «ПЗЭМИ»), электротехнику, комплектующие для сборки электрощитов, светотехнику и другую продукцию международной электротехнической компании «ИнтерЭлектроКомплект» («IEK»)  и Национальной электротехнической компании Морозова («TDM Electric»). Также в ассортименте представлена линейная арматура  и инструмент для монтажа самонесущих изолированных проводов напряжением 0,4 кВ компании «NILED».
+                            <br><br>
+                            Стремясь обеспечить выгодные условия поставки электротехнической продукции для наших Клиентов  в Москве и Московской области, в компании «ГринЭнергоСнаб»:</p>
+                        <ul>
+                            <li>
+                                Сосредоточили свои усилия на поставке продукции высокого качества по низким ценам.
+                            </li>
+                            <li>
+                                Организовали работу офиса и склада в режиме "одного окна", чтобы Клиенты могли в минимальные сроки и в одном месте получить необходимую продукцию.
+                            </li>
+                            <li>
+                                Предусмотрели для постоянных Клиентов систему скидок, а также возможность отсрочки платежа.
+                            </li>
+                            <li>
+                                Осуществляют сборку и доставку заказанной электротехнической продукции в любой город России и стран СНГ.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--end of content center-->
+            <div class="col-lg-2 right_column">
+                <div class="subscribe_box">
+                    <p class="subscribe_title">Будьте в курсе наших скидок и акций!</p>
+                    <input type="email" class="email" placeholder="E-mail">
+                    <div class="check d-flex">
+                        <input type="checkbox" class="checkbox">
+                        <label for="checkbox"></label>
+                        <p>Даю согласие на обработку персональных данных согласно политики конфиденциальности сайта</p>
+                    </div>
+                    <button class="subscribe">Подписаться</button>
+                </div>
+                <div class="news_box">
+                    <p class="news_title">Новости</p>
+                    <div class="news">
+                        <p class="date">23.03.2017</p>
+                        <a href="#" class="short_text">Концевые выключатели — новинка в ассортименте продукции IEK</a>
+                    </div>
+                    <div class="news">
+                        <p class="date">23.03.2017</p>
+                        <a href="#" class="short_text">Концевые выключатели — новинка в ассортименте продукции IEK</a>
+                    </div>
+                    <div class="news">
+                        <p class="date">23.03.2017</p>
+                        <a href="#" class="short_text">Концевые выключатели — новинка в ассортименте продукции IEK</a>
+                    </div>
+                    <div class="news">
+                        <p class="date">23.03.2017</p>
+                        <a href="#" class="short_text">Концевые выключатели — новинка в ассортименте продукции IEK</a>
+                    </div>
+                    <div class="news">
+                        <p class="date">23.03.2017</p>
+                        <a href="#" class="short_text">Концевые выключатели — новинка в ассортименте продукции IEK</a>
+                    </div>
+                    <a href="#" class="btn_bordered">Все новости</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--end of content-->
+
+<!--Footer-->
+<footer class="footer" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <h3 class="footer_title">Контакты</h3>
+                <div class="footer_info">
+                    <a href="#"><i class="fa fa-map-marker-alt"></i>г. Москва, ул. Дорожная, д. 60, стр. 4</a>
+                    <a href="#"><i class="fa fa-envelope"></i>zakaz@grinenergosnab.ru</a>
+                    <a href="#"><i class="fa fa-phone"></i>+7 (495) 638-57-56</a>
+                    <a href="#" class="link">Схема проезда</a>
+                </div>
+            </div>
+            <div class="col-lg-2 ml-auto">
+                <h3 class="footer_title">Продукция</h3>
+                <ul class="small_menu">
+                    <li><a href="#">Кабель, провод</a></li>
+                    <li><a href="#">Электротехническая продукция</a></li>
+                    <li><a href="#">Кабеленесеущие системы</a></li>
+                    <li><a href="#">Светотехническая продукция</a></li>
+                    <li><a href="#">Электрощитовое оборудование</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2">
+                <h3 class="footer_title">О компании</h3>
+                <ul class="big_menu">
+                    <li><a href="#">Технические каталоги</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Видео</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2">
+                <h3 class="footer_title">Подбор муфт</h3>
+                <ul class="big_menu">
+                    <li><a href="#">Прайс-лист</a></li>
+                    <li><a href="#">Оплата и доставка</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="after_footer">
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-lg-6"><p class="copyright">©«ГринЭнергоСнаб», 2009-2019 — электротехническая продукция.
+                    Все права защищены</p></div>
+                <div class="col-lg-1 ml-auto"><a href="#" class="map_site">Карта сайта</a></div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--end of footer-->
+
+
+<!--Scripts libs-->
 <script src="js/libs.min.js"></script>
+<!--Custom Scripts-->
 <script src="js/scripts.js"></script>
+<!--Awesome-->
+<script src="https://kit.fontawesome.com/684bd2fe9e.js"></script>
 </body>
 </html>
