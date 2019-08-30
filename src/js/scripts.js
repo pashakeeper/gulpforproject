@@ -19,41 +19,41 @@ $(document).ready(function () {
         dots: false
     });
     newprod.owlCarousel({
-       items: 4,
-       nav: false,
-       dots: false,
+        items: 4,
+        nav: false,
+        dots: false,
     });
     stockslider.owlCarousel({
-       items: 4,
-       nav: false,
-       dots: false,
+        items: 4,
+        nav: false,
+        dots: false,
     });
-    $('.brands_navs .next_arr').click(function() {
+    $('.brands_navs .next_arr').click(function () {
         brands.trigger('next.owl.carousel');
     });
-    $('.brands_navs .prev_arr').click(function() {
+    $('.brands_navs .prev_arr').click(function () {
         brands.trigger('prev.owl.carousel');
     });
-    $('.popular .next_arr').click(function() {
+    $('.popular .next_arr').click(function () {
         popular.trigger('next.owl.carousel');
     });
-    $('.popular .prev_arr').click(function() {
+    $('.popular .prev_arr').click(function () {
         popular.trigger('prev.owl.carousel');
     });
-    $('.new .next_arr').click(function() {
+    $('.new .next_arr').click(function () {
         newprod.trigger('next.owl.carousel');
     });
-    $('.new .prev_arr').click(function() {
+    $('.new .prev_arr').click(function () {
         newprod.trigger('prev.owl.carousel');
     });
-    $('.stock .next_arr').click(function() {
+    $('.stock .next_arr').click(function () {
         stockslider.trigger('next.owl.carousel');
     });
-    $('.stock .prev_arr').click(function() {
+    $('.stock .prev_arr').click(function () {
         stockslider.trigger('prev.owl.carousel');
     });
     $('<div class="quantity-nav"><div class="quantity-button quantity-down">-</div><div class="quantity-button quantity-up">+</div></div>').insertAfter('.quantity input');
-    $('.quantity').each(function() {
+    $('.quantity').each(function () {
         var spinner = jQuery(this),
             input = spinner.find('input[type="number"]'),
             btnUp = spinner.find('.quantity-up'),
@@ -61,7 +61,7 @@ $(document).ready(function () {
             min = input.attr('min'),
             max = input.attr('max');
 
-        btnUp.click(function() {
+        btnUp.click(function () {
             var oldValue = parseFloat(input.val());
             if (oldValue >= max) {
                 var newVal = oldValue;
@@ -72,7 +72,7 @@ $(document).ready(function () {
             spinner.find("input").trigger("change");
         });
 
-        btnDown.click(function() {
+        btnDown.click(function () {
             var oldValue = parseFloat(input.val());
             if (oldValue <= min) {
                 var newVal = oldValue;
@@ -83,5 +83,14 @@ $(document).ready(function () {
             spinner.find("input").trigger("change");
         });
 
+    });
+    $('#num').niceSelect();
+
+    $('.views').click(function (e) {
+        e.preventDefault();
+        if (!$(this).is('.active')) {
+            $('.views').removeClass('active');
+            $(this).addClass('active');
+        }
     });
 });

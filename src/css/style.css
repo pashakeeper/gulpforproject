@@ -373,7 +373,14 @@ header {
   .content_section .right_column .subscribe_box {
     padding: 20px;
     background: white;
-    margin-top: 16px; }
+    margin-top: 16px;
+    /* Hide the browser's default checkbox */
+    /* Create a custom checkbox */
+    /* On mouse-over, add a grey background color */
+    /* When the checkbox is checked, add a blue background */
+    /* Create the checkmark/indicator (hidden when not checked) */
+    /* Show the checkmark when checked */
+    /* Style the checkmark/indicator */ }
     .content_section .right_column .subscribe_box .subscribe_title {
       font-weight: bold;
       font-size: 20px;
@@ -392,43 +399,57 @@ header {
       height: 48px;
       padding-left: 15px;
       margin-top: 18px; }
-    .content_section .right_column .subscribe_box .checkbox {
-      opacity: 0;
-      position: absolute; }
-    .content_section .right_column .subscribe_box .checkbox + label {
-      border: 1px solid #D9D9D9;
-      background: transparent;
-      min-width: 16px;
-      height: 16px;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center;
-      margin-bottom: 0; }
-    .content_section .right_column .subscribe_box .checkbox + label::after {
-      content: '';
-      position: absolute;
+    .content_section .right_column .subscribe_box .container_label {
       display: block;
-      font-family: "Font Awesome 5 Pro";
-      width: 10px;
-      height: 10px; }
-    .content_section .right_column .subscribe_box .checkbox:checked + label::after {
-      content: '\f14a';
-      background: #000000; }
-    .content_section .right_column .subscribe_box .checkbox:checked + label {
-      background: #000; }
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+    .content_section .right_column .subscribe_box .container_label input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0; }
+    .content_section .right_column .subscribe_box .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 15px;
+      width: 15px;
+      background-color: #eee;
+      text-align: center;
+      cursor: pointer; }
+    .content_section .right_column .subscribe_box .container_label:hover input ~ .checkmark {
+      background-color: #ccc; }
+    .content_section .right_column .subscribe_box .container_label input:checked ~ .checkmark {
+      background-color: #2196F3; }
+    .content_section .right_column .subscribe_box .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none; }
+    .content_section .right_column .subscribe_box .container_label input:checked ~ .checkmark:after {
+      display: block; }
+    .content_section .right_column .subscribe_box .container_label .checkmark:after {
+      left: 5px;
+      top: 2px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg); }
     .content_section .right_column .subscribe_box .check {
-      margin-top: 18px; }
+      margin-top: 18px;
+      position: relative; }
       .content_section .right_column .subscribe_box .check p {
-        margin-left: 9px; }
+        padding-left: 30px; }
     .content_section .right_column .subscribe_box .subscribe {
       display: -webkit-box;
       display: -webkit-flex;
@@ -1207,3 +1228,166 @@ header {
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 16px; }
+
+.menu_accordion {
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */ }
+  .menu_accordion .container_label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-right: 20px;
+    width: 15px; }
+  .menu_accordion .container_label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0; }
+  .menu_accordion .checkmark {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-left: -20px;
+    border: 1px solid #BDBDBD; }
+  .menu_accordion .container_label:hover input ~ .checkmark {
+    background-color: #ccc; }
+  .menu_accordion .container_label input:checked ~ .checkmark {
+    background-color: #7CA92D; }
+  .menu_accordion .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none; }
+  .menu_accordion .container_label input:checked ~ .checkmark:after {
+    display: block; }
+  .menu_accordion li span {
+    display: block; }
+
+.big_card {
+  background: white;
+  margin-top: 42px;
+  padding: 20px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05); }
+  .big_card .image_holder {
+    padding: 15px;
+    border: 1px solid #BDBDBD;
+    -webkit-border-radius: 2px;
+            border-radius: 2px;
+    max-width: 400px;
+    width: 100%;
+    height: 380px; }
+    .big_card .image_holder img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: contain;
+         object-fit: contain; }
+  .big_card .big_card_text {
+    font-size: 18px;
+    color: #1A1A1A;
+    margin-bottom: 18px; }
+  .big_card .big_card_small_text {
+    color: #58595B;
+    margin-top: 20px; }
+  .big_card .big_card_grey_text {
+    color: #BDBDBD;
+    margin-top: 20px; }
+
+.table_prod {
+  margin-top: 66px; }
+  .table_prod .table_pre_header .sort {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .table_prod .table_pre_header .sort a {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      color: #BDBDBD;
+      -webkit-transition: all .2s ease;
+      -o-transition: all .2s ease;
+      transition: all .2s ease;
+      margin-left: 40px; }
+      .table_prod .table_pre_header .sort a:hover {
+        color: #7CA92D; }
+      .table_prod .table_pre_header .sort a i {
+        margin-left: 10px; }
+      .table_prod .table_pre_header .sort a i::before {
+        position: relative;
+        top: 2px; }
+  .table_prod .table_pre_header .see_quantity {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+    .table_prod .table_pre_header .see_quantity .nice-select {
+      margin-left: 10px; }
+    .table_prod .table_pre_header .see_quantity .views {
+      margin-left: 20px; }
+      .table_prod .table_pre_header .see_quantity .views svg rect {
+        -webkit-transition: all .2s ease;
+        -o-transition: all .2s ease;
+        transition: all .2s ease; }
+      .table_prod .table_pre_header .see_quantity .views:hover svg rect {
+        fill: #7CA92D; }
+      .table_prod .table_pre_header .see_quantity .views.active svg rect {
+        fill: #7CA92D; }
+    .table_prod .table_pre_header .see_quantity .views:first-child {
+      margin-left: 54px; }
+  .table_prod .table_container {
+    background: white;
+    margin-top: 20px; }
+    .table_prod .table_container .table_header {
+      padding-top: 32px;
+      padding-bottom: 24px; }
+      .table_prod .table_container .table_header div {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center; }

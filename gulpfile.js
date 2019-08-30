@@ -77,6 +77,7 @@ function scriptslibs() {
         './src/libs/jquery/dist/jquery.min.js',
         './src/libs/bootstrap4/dist/js/bootstrap.min.js',
         './src/libs/owl.carousel/dist/owl.carousel.min.js',
+        './src/libs/jquery-nice-select/js/jquery.nice-select.min.js',
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())

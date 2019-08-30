@@ -316,7 +316,6 @@ header {
   }
 }
 
-
 /*Content section*/
 .content_section {
   background: #E5E5E5;
@@ -434,46 +433,80 @@ header {
         padding-left: 15px;
         margin-top: 18px;
       }
-
-      .checkbox {
-        opacity: 0;
-        position: absolute;
-      }
-
-      .checkbox + label {
-        border: 1px solid #D9D9D9;
-        background: transparent;
-        min-width: 16px;
-        height: 16px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 0;
-      }
-
-      .checkbox + label::after {
-        content: '';
-        position: absolute;
+      .container_label {
         display: block;
-        font-family: "Font Awesome 5 Pro";
-        width: 10px;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* Hide the browser's default checkbox */
+      .container_label input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      /* Create a custom checkbox */
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 15px;
+        width: 15px;
+        background-color: #eee;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      /* On mouse-over, add a grey background color */
+      .container_label:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
+
+      /* When the checkbox is checked, add a blue background */
+      .container_label input:checked ~ .checkmark {
+        background-color: #2196F3;
+      }
+
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      /* Show the checkmark when checked */
+      .container_label input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      /* Style the checkmark/indicator */
+      .container_label .checkmark:after {
+        left: 5px;
+        top: 2px;
+        width: 5px;
         height: 10px;
-
-      }
-
-      .checkbox:checked + label::after {
-        content: '\f14a';
-        background: #000000;
-      }
-      .checkbox:checked + label {
-        background: #000;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
       }
 
       .check {
         margin-top: 18px;
-
+        position: relative;
         p {
-          margin-left: 9px;
+          padding-left: 30px;
         }
       }
 
@@ -563,7 +596,7 @@ header {
         top: 50%;
         transform: translate(0, -50%);
         .owl-prev {
-            left: 40px;
+          left: 40px;
         }
         .owl-next {
           right: 40px;
@@ -693,7 +726,7 @@ header {
         }
       }
     }
-    .popular_slider,.new_slider,.stock_slider  {
+    .popular_slider, .new_slider, .stock_slider {
       margin-top: 24px;
     }
     .card {
@@ -770,14 +803,12 @@ header {
           }
         }
         input[type=number]::-webkit-inner-spin-button,
-        input[type=number]::-webkit-outer-spin-button
-        {
+        input[type=number]::-webkit-outer-spin-button {
           -webkit-appearance: none;
           margin: 0;
         }
 
-        input[type=number]
-        {
+        input[type=number] {
           -moz-appearance: textfield;
           text-align: center;
         }
@@ -843,7 +874,7 @@ header {
         .quantity-button.quantity-down {
           position: absolute;
           height: 50%;
-          top:10px;
+          top: 10px;
           left: 28px;
           z-index: 200;
         }
@@ -922,7 +953,7 @@ header {
       color: $text-main;
       margin-top: 20px;
       &:hover {
-        box-shadow:  0 0 20px rgba(0,0,0,.2);
+        box-shadow: 0 0 20px rgba(0, 0, 0, .2);
         transform: scale(1.1);
         color: $text-main;
         img {
@@ -966,7 +997,7 @@ header {
       justify-content: space-between;
       transition: all .2s ease;
       &:hover {
-        box-shadow: 0 0 20px rgba(0,0,0,.2);
+        box-shadow: 0 0 20px rgba(0, 0, 0, .2);
       }
       .btn_primary {
         align-self: flex-end;
@@ -989,15 +1020,18 @@ header {
     }
   }
 }
+
 .second_title {
   font-weight: 500;
   font-size: 28px;
   color: $text-main;
   text-transform: uppercase;
 }
+
 .owl-nav.disabled {
   display: none;
 }
+
 .custom_navs {
   display: flex;
   div {
@@ -1027,6 +1061,7 @@ header {
 
   }
 }
+
 .see_all {
   color: $links;
   transition: all .5s ease;
@@ -1036,6 +1071,7 @@ header {
     color: $primary-color;
   }
 }
+
 .btn_primary {
   display: flex;
   align-items: center;
@@ -1149,7 +1185,6 @@ header {
   }
 }
 
-
 /*Other Pages*/
 .accordion_trigger {
   background-color: transparent;
@@ -1177,6 +1212,7 @@ header {
     color: $primary-color;
   }
 }
+
 .menu_accordion {
   li {
     margin: 5px 0;
@@ -1191,12 +1227,15 @@ header {
     }
   }
 }
+
 .accordion {
   margin-bottom: 35px;
 }
+
 .card {
   border-radius: 0;
 }
+
 .menu_header {
   background: $primary-color;
   color: white;
@@ -1207,4 +1246,190 @@ header {
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 16px;
+}
+
+.menu_accordion {
+  .container_label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-right: 20px;
+    width: 15px;
+  }
+
+  /* Hide the browser's default checkbox */
+  .container_label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-left: -20px;
+    border: 1px solid $hover;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .container_label:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  .container_label input:checked ~ .checkmark {
+    background-color: $primary-color;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .container_label input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  //.container_label .checkmark:after {
+  //  left: 5px;
+  //  top: 2px;
+  //  width: 5px;
+  //  height: 10px;
+  //  border: solid white;
+  //  border-width: 0 3px 3px 0;
+  //  -webkit-transform: rotate(45deg);
+  //  -ms-transform: rotate(45deg);
+  //  transform: rotate(45deg);
+  //}
+  li {
+    span {
+      display: block;
+    }
+  }
+}
+
+.big_card {
+  background: white;
+  margin-top: 42px;
+  padding: 20px;
+  align-items: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+  .image_holder {
+    padding: 15px;
+    border: 1px solid #BDBDBD;
+    border-radius: 2px;
+    max-width: 400px;
+    width: 100%;
+    height: 380px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .big_card_text {
+    font-size: 18px;
+    color: $text-main;
+    margin-bottom: 18px;
+  }
+  .big_card_small_text {
+    color: $second-text;
+    margin-top: 20px;
+  }
+  .big_card_grey_text {
+    color: $hover;
+    margin-top: 20px;
+  }
+}
+
+.table_prod {
+  margin-top: 66px;
+  .table_pre_header {
+    .sort {
+      display: flex;
+      align-items: center;
+      a {
+        display: flex;
+        align-items: center;
+        color: $hover;
+        transition: all .2s ease;
+        margin-left: 40px;
+        &:hover {
+          color: $primary-color;
+        }
+        i {
+          margin-left: 10px;
+        }
+        i::before {
+          position: relative;
+          top: 2px;
+        }
+      }
+    }
+    .see_quantity {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .nice-select {
+        margin-left: 10px;
+      }
+      .views {
+        margin-left: 20px;
+        svg {
+          rect {
+            transition: all .2s ease;
+          }
+        }
+        &:hover {
+          svg {
+            rect {
+              fill: $primary-color;
+            }
+          }
+        }
+        &.active {
+          svg {
+            rect {
+              fill: $primary-color;
+            }
+          }
+        }
+      }
+      .views:first-child {
+        margin-left: 54px;
+      }
+    }
+  }
+  .table_container {
+    background: white;
+    margin-top: 20px;
+    .table_header {
+      padding-top: 32px;
+      padding-bottom: 24px;
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
 }
